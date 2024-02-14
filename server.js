@@ -9,7 +9,7 @@ app.use(
     cors({
         origin: [
             'http://localhost:5173',
-            'https://labb-3-skivregister.vercel.app/'
+            'https://labb-3-skivregister.vercel.app'
         ]
     })
 )
