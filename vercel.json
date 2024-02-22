@@ -7,18 +7,24 @@
         }
     ],
     "headers": [
-      {
-        "source": "/(.*)",
-        "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "https://labb-3-skivregister.vercel.app" }
-        ]
-      },
-      {
-        "source": "/labb-3-skivregister.vercel.app/(.*)",
-        "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "https://labb-3-skivregister.vercel.app" }
-        ]
-      }
-  ]
+        {
+            "source": "/api/(.*)",
+            "headers": [
+                { "key": "Access-Control-Allow-Credentials", "value": "true" },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "https://labb-3-skivregister.vercel.app"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET,OPTIONS,POST,PUT"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+                }
+            ]
+        }
+    ]
 
 }
