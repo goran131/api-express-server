@@ -1,18 +1,8 @@
 const express = require('express')
 const multer = require('multer')
 const path = require('path')
-const cors = require('cors')
 const app = express()
 const port = 5000
-
-app.use(
-    cors({
-        origin: [
-            'http://localhost:5173',
-            'https://labb-3-skivregister.vercel.app'
-        ]
-    })
-)
 
 const uploadPath = path.join(
     __dirname,

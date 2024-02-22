@@ -1,0 +1,24 @@
+{
+
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "server.js"
+        }
+    ],
+    "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "https://labb-3-skivregister.vercel.app" }
+        ]
+      },
+      {
+        "source": "/labb-3-skivregister.vercel.app/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "https://labb-3-skivregister.vercel.app" }
+        ]
+      }
+  ]
+
+}
